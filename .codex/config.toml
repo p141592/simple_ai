@@ -1,0 +1,24 @@
+openai_base_url = "https://us.api.openai.com/v1"
+model = "gpt-5.5"
+model_reasoning_summary = "none"          # Disable summaries
+model_verbosity = "low"                   # Shorten responses
+model_supports_reasoning_summaries = true # Force reasoning
+model_context_window = 128000             # Context window size
+
+[analytics]
+enabled = false
+
+[feedback]
+enabled = false
+hide_agent_reasoning = true
+
+[agents]
+max_threads = 6
+max_depth = 1
+
+[[skills.config]]
+path = ".ai/skills/caveman/SKILL.md"
+enabled = true
+
+[features]
+memories = true

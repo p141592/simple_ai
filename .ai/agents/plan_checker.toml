@@ -1,0 +1,19 @@
+# Тут я сделаю агента для проверки выполнения плана
+
+name = "code_mapper"
+description = "Read-only codebase explorer for locating the relevant frontend and backend code paths."
+model = "gpt-5.4-mini"
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+developer_instructions = """
+Map the code that owns the failing UI flow.
+Identify entry points, state transitions, and likely files before the worker starts editing.
+"""
+
+[[skills.config]]
+path = "/Users/me/.agents/skills/docs-editor/SKILL.md"
+enabled = false
+
+[mcp_servers.chrome_devtools]
+url = "http://localhost:3000/mcp"
+startup_timeout_sec = 20
